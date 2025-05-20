@@ -8,7 +8,7 @@ inputUAH.addEventListener("input", () => {
   request.setRequestHeader("Content-type", "application/json");
   request.send();
 
-  // "statusChanged" if requset.state === 4
+  // "readystatechange" if request.readystate === 4
   request.addEventListener("load", () => {
     if (request.status === 200) {
       const data = JSON.parse(request.response);
